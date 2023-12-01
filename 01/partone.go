@@ -1,12 +1,10 @@
 package main
 
 import (
-	"fmt"
-
 	helpers "github.com/mangusm/advent-of-code-2023/v2"
 )
 
-func PartOne() {
+func PartOne() int {
 	lines, err := helpers.ReadLines("input.txt")
 	if err != nil {
 		panic(err)
@@ -28,5 +26,5 @@ func PartOne() {
 		lineSum += lastNumber
 		sum += lineSum
 	}
-	fmt.Println(sum)
+	return sum
 }

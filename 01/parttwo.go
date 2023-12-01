@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-
 	helpers "github.com/mangusm/advent-of-code-2023/v2"
 )
 
@@ -19,7 +17,7 @@ func lookahead(line string, idx int) int {
 	return 0
 }
 
-func PartTwo() {
+func PartTwo() int {
 	lines, err := helpers.ReadLines("input.txt")
 	if err != nil {
 		panic(err)
@@ -52,5 +50,5 @@ func PartTwo() {
 		lineSum += lastNumber
 		sum += lineSum
 	}
-	fmt.Println(sum)
+	return sum
 }
