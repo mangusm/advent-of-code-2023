@@ -28,19 +28,19 @@ func PartOne() int {
 			length := len(strings[j]) + 1
 
 			if i > 0 {
-				if re2.MatchString(lines[i-1][helpers.Max(idx-length, 0):helpers.Min(idx+1, 140)]) {
+				if re2.MatchString(lines[i-1][max(idx-length, 0):min(idx+1, 140)]) {
 					sum += partNumber
 					continue
 				}
 			}
 
-			if re2.MatchString(line[idx-1:idx-1]) || re2.MatchString(line[helpers.Max(idx-length, 0):helpers.Min(idx+1, 140)]) {
+			if re2.MatchString(line[idx-1:idx-1]) || re2.MatchString(line[max(idx-length, 0):min(idx+1, 140)]) {
 				sum += partNumber
 				continue
 			}
 
 			if i < len(lines) {
-				if re2.MatchString(lines[i+1][helpers.Max(idx-length, 0):helpers.Min(idx+1, 140)]) {
+				if re2.MatchString(lines[i+1][max(idx-length, 0):min(idx+1, 140)]) {
 					sum += partNumber
 					continue
 				}
